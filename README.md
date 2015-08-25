@@ -47,3 +47,7 @@ If you rather want to set up Eclipse with the leJOS-plugin yourself, you may fol
 If you want to use IntelliJ, you may follow the guide in `README-INTELLIJ.md`.
 
 If you want to build using Apache Ant instead of Eclipse, you may follow the guide in `README-ANT.md`.
+
+## Running a program
+
+To run a program, right click a file containing a main method, `Run As -> LeJos EV3 Program`.
