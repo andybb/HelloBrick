@@ -21,7 +21,7 @@ public class SumoMain {
 	/**
 	 * Drives forward until the color white is seen, then turns left until it is
 	 * no longer registered. Stops if distance sensor sees an object closer than
-	 * 20~cm.
+	 * positive infinity.
 	 */
 	private void drive() {
 		boolean run = true;
