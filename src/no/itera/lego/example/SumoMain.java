@@ -30,9 +30,9 @@ public class SumoMain {
 		ev3Helper.forward();
 
 		while (run) {
+			
 			lastSampleSet.takeSamples();
-
-			if (lastSampleSet.getLastDistance() < 20) { // stops when close to something
+			if (lastSampleSet.getLastDistance() < Float.POSITIVE_INFINITY) { // stops when close to something
 				ev3Helper.stop();
 				run = false;
 			} else if (lastSampleSet.getLastColor().equals("WHITE")) { // turns left while reading the color white
