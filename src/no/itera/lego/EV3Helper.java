@@ -31,7 +31,6 @@ public class EV3Helper {
 
   private RegulatedMotor motorRight;
   private RegulatedMotor motorLeft;
-  private RegulatedMotor motorCannon;
   private EV3IRSensor irSensor;
   private EV3ColorSensor colorSensor;
 
@@ -84,9 +83,6 @@ public class EV3Helper {
     return motorLeft;
   }
 
-  public RegulatedMotor getMotorCannon() {
-    return motorCannon;
-  }
 
   public EV3IRSensor getIrSensor() {
     return irSensor;
@@ -181,7 +177,12 @@ public class EV3Helper {
 
 
   /**
+   * Blocking functions can not read sensors at the same time.
+   */
+  
+  /**
    * Drives forward the given centimeters and stops when complete
+   * This function is blocking
    * @param cm
    */
   public void forward(int cm) {
@@ -191,6 +192,7 @@ public class EV3Helper {
 
   /**
    * Drives forward the given centimeters and stops when complete
+   * This function is blocking
    * @param cm
    */
   public void backward(int cm) {
@@ -200,6 +202,7 @@ public class EV3Helper {
 
   /**
    * Drives in the given direction (forward/backward)
+   * This function is blocking
    * @param cm How many centimeters to drive
    * @param direction Which direction to drive in
    */
@@ -214,6 +217,7 @@ public class EV3Helper {
 
   /**
    * Turns left the given number of degrees
+   * This function is blocking
    * @param degrees
    */
   public void turnLeft(int degrees) {
@@ -224,6 +228,7 @@ public class EV3Helper {
 
   /**
    * Turns right the given number of degrees
+   * This function is blocking
    * @param degrees
    */
   public void turnRight(int degrees) {
