@@ -59,3 +59,11 @@ When seeing the robot from the back, the rightmost motor should be connected to 
 The IR sensor should be connected to port 1, and the color sensor should be connected to port 4.
 
 This is defined in src/no/itera/lego/EV3Helper.java, lines 65, 66, 73, 74, and can be changed.
+
+## Tips and Tricks
+
+You can use system.out.println() to print to the display.
+
+Press `Center + Down` at the same time to stop the current program.
+
+You can start an uploaded program by `Programs -> "name of program" -> Execute Program`.
