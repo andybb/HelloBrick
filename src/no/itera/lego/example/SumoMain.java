@@ -19,7 +19,7 @@ public class SumoMain {
 	}
 
 	/**
-	 * Drives forward until the color white is seen, then turns left until it is
+	 * Drives forward until the color black is seen, then turns left until it is
 	 * no longer registered. Stops if distance sensor sees an object closer than
 	 * positive infinity.
 	 */
@@ -35,7 +35,7 @@ public class SumoMain {
 			if (lastSampleSet.getLastDistance() < Float.POSITIVE_INFINITY) { // stops when close to something
 				ev3Helper.stop();
 				run = false;
-			} else if (lastSampleSet.getLastColor().equals("WHITE")) { // turns left while reading the color white
+			} else if (lastSampleSet.getLastColor().equals("BLACK")) { // turns left while reading the color black
 				motorLeft.stop(true); // immediate return
 				turning = true;
 			} else if (turning) { // No black color registered, driving in a straight line again.
