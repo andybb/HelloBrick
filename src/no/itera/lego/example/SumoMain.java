@@ -32,10 +32,12 @@ public class SumoMain {
 		while (run) {
 			
 			lastSampleSet.takeSamples();
+			System.out.println(lastSampleSet.getLastColor());
 			if (lastSampleSet.getLastDistance() < Float.POSITIVE_INFINITY) { // stops when close to something
-				ev3Helper.stop();
-				run = false;
-			} else if (lastSampleSet.getLastColor().equals("BLACK")) { // turns left while reading the color black
+				//ev3Helper.stop();
+				//run = false;
+				System.out.println("something");
+			} else if (lastSampleSet.getLastColor().equals("BLACK") || lastSampleSet.getLastColor().equals("NONE")) { // turns left while reading the color black
 				motorLeft.stop(true); // immediate return
 				turning = true;
 			} else if (turning) { // No black color registered, driving in a straight line again.
