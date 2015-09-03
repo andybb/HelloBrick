@@ -60,6 +60,12 @@ The IR sensor should be connected to port 1, and the color sensor should be conn
 
 This is defined in src/no/itera/lego/EV3Helper.java, lines 65, 66, 73, 74, and can be changed.
 
+## Common error messages
+
+`Uncaught Exception: java.lang.UnsopprtedClassVersion`. This means you are compiling for Java 8, which is not supported by leJOS. To solve this `Right click project -> Properties -> Java Compiler -> Check "Enable project specific settings" -> change "Compiler compilance level" to 1.7`.
+
+`Uncaught Exception: java.lang.IllegalArgumentException. Invalid sensor mode`. Make sure all sensors are connected, and not in use by the EV3 Controller.
+
 ## Tips and Tricks
 
 You can use system.out.println() to print to the display.
