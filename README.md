@@ -73,3 +73,5 @@ You can use system.out.println() to print to the display.
 Press `Center + Down` at the same time to stop the current program.
 
 You can start an uploaded program by `Programs -> "name of program" -> Execute Program`.
+
+Make sure the color sensor is not too far or too close to the ground. Use the EV3 Control plugin in Eclipse to test the sensors. A color_ID to color chart can be found [here](http://www.lejos.org/nxt/pc/api/constant-values.html#lejos.robotics).
